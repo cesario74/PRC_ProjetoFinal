@@ -1,0 +1,164 @@
+@prefix : <http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash> .
+
+<http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash> rdf:type owl:Ontology ;
+                                                                       owl:versionIRI <http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#faz
+:faz rdf:type owl:ObjectProperty ;
+     owl:inverseOf :feitoPor ;
+     rdfs:domain :Companhia ;
+     rdfs:range :Voo .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#feitoPor
+:feitoPor rdf:type owl:ObjectProperty ;
+          rdfs:domain :Voo ;
+          rdfs:range :Companhia .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#provoca
+:provoca rdf:type owl:ObjectProperty ;
+         owl:inverseOf :saoProvocadasPor ;
+         rdfs:domain :Voo ;
+         rdfs:range :Baixas .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#saoProvocadasPor
+:saoProvocadasPor rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Baixas ;
+                  rdfs:range :Voo .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#baixasColaterais
+:baixasColaterais rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Baixas ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#baixasDoAviao
+:baixasDoAviao rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Baixas ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#data
+:data rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Voo ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#descrAcontecimento
+:descrAcontecimento rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Companhia ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#hora
+:hora rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Voo ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#localDoAcidente
+:localDoAcidente rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Voo ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Companhia ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#nrDeVoo
+:nrDeVoo rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Voo ;
+         rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#nrPessoas
+:nrPessoas rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Voo ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#registoAviao
+:registoAviao rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Voo ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#rota
+:rota rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Voo ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#tipoDeAviao
+:tipoDeAviao rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Voo ;
+             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#Baixas
+:Baixas rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#Companhia
+:Companhia rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#Voo
+:Voo rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#baixas5241
+:baixas5241 rdf:type owl:NamedIndividual ,
+		:Baixas ;
+	:saoProvocadasPor :voo5241 ;
+	:baixasDoAviao 7 ;
+	:baixasColaterais 0 .
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#comp5241
+:comp5241 rdf:type owl:NamedIndividual ,
+		:Companhia ;
+	:faz :voo5241 ;
+	:descrAcontecimento "The Airbus A320 was leased by XL Airways of Germany since May 2006. The plane was scheduled to be returned to its owner, Air New Zealand. The plane was ferried to Perpignan, France where it underwent maintenance at EAS Industries. During a second test flight, on approach to Perpignan, at 3,500 feet, radio contact was lost. A controller reported seeing the plane descending quickly in a left bank. The aircraft soon after crashed into the sea and broke up." ;
+	:nome "XL Airways leased from Air New Zealand" .
+
+###  http://www.semanticweb.org/cp74/ontology/TP/PRC2019/Airplanes_Crash#voo5241
+:voo5241 rdf:type owl:NamedIndividual ,
+		:Voo ;
+	:feitoPor :comp5241 ;
+	:provoca :baixas5241 ;
+	:data "2008/11/27" ;
+	:hora "17:00" ;
+	:localDoAcidente "Off Perpignan, France" ;
+	:nrPessoas 7 ;
+	:rota "Training" ;
+	:tipoDeAviao "Airbus A320-232" .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
